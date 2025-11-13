@@ -1,45 +1,32 @@
-{% comment %}
-  Product detail page template
-{% endcomment %}
-
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ product.name }} - {{ store.name }}</title>
-  
-  {% render 'head' %}
-</head>
-<body>
-  {% section 'header' %}
-  
-  <main>
-    <div class="product-detail">
+<section class="product-detail">
+  <div class="container">
+    <div class="product-wrapper">
       <div class="product-images">
         {% for image in product.images %}
           <img src="{{ image.url }}" alt="{{ product.name }}">
+        {% else %}
+          <div class="placeholder-image">
+            <span>{{ 'general.add_to_cart' | t }}</span>
+          </div>
         {% endfor %}
       </div>
-      
+
       <div class="product-info">
         <h1>{{ product.name }}</h1>
         <p class="price">{{ product.price | money }}</p>
         <div class="description">
-          {{ product.description }}
+          {{ product.description | default: 'لا توجد تفاصيل متاحة لهذا المنتج.' }}
         </div>
-        
-        <form action="/cart/add" method="post">
-          <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-          <button type="submit" class="btn-primary">احجز الآن</button>
+
+        <form action="/cart/add" method="post" class="product-form">
+          {% if product.available %}
+            <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+            <button type="submit" class="btn-primary">{{ 'product.add_to_cart' | t }}</button>
+          {% else %}
+            <button type="button" class="btn-disabled" disabled>{{ 'product.out_of_stock' | t }}</button>
+          {% endif %}
         </form>
       </div>
     </div>
-  </main>
-  
-  {% section 'footer' %}
-  
-  {% render 'scripts' %}
-</body>
-</html>
-
+  </div>
+</section>

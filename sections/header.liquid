@@ -7,7 +7,11 @@
     <div class="header-content">
       <div class="logo">
         <a href="/">
-          <img src="{{ 'logo.png' | asset_url }}" alt="{{ store.name }}">
+          {% if section.settings.logo %}
+            <img src="{{ section.settings.logo | file_url }}" alt="{{ store.name }}">
+          {% else %}
+            <span class="logo-text">{{ store.name }}</span>
+          {% endif %}
         </a>
       </div>
       
@@ -29,4 +33,22 @@
     </div>
   </div>
 </header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "شعار المتجر"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header"
+    }
+  ]
+}
+{% endschema %}
 

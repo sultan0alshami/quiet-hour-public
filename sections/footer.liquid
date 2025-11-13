@@ -6,34 +6,155 @@
   <div class="container">
     <div class="footer-content">
       <div class="footer-section">
-        <h3>{{ store.name }}</h3>
-        <p>منصة حجز خدمات السبا المميزة</p>
+        <h3>{{ section.settings.title | default: store.name }}</h3>
+        <p>{{ section.settings.subtitle | default: 'منصة حجز خدمات السبا المميزة' }}</p>
       </div>
       
       <div class="footer-section">
-        <h4>روابط سريعة</h4>
+        <h4>{{ section.settings.links_title | default: 'روابط سريعة' }}</h4>
         <ul>
-          <li><a href="/">الرئيسية</a></li>
-          <li><a href="/collections/services">الخدمات</a></li>
-          <li><a href="/pages/about">من نحن</a></li>
-          <li><a href="/pages/contact">اتصل بنا</a></li>
+          {% if section.settings.link_1_title and section.settings.link_1_url %}
+            <li><a href="{{ section.settings.link_1_url }}">{{ section.settings.link_1_title }}</a></li>
+          {% endif %}
+          {% if section.settings.link_2_title and section.settings.link_2_url %}
+            <li><a href="{{ section.settings.link_2_url }}">{{ section.settings.link_2_title }}</a></li>
+          {% endif %}
+          {% if section.settings.link_3_title and section.settings.link_3_url %}
+            <li><a href="{{ section.settings.link_3_url }}">{{ section.settings.link_3_title }}</a></li>
+          {% endif %}
+          {% if section.settings.link_4_title and section.settings.link_4_url %}
+            <li><a href="{{ section.settings.link_4_url }}">{{ section.settings.link_4_title }}</a></li>
+          {% endif %}
+          {% unless section.settings.link_1_title %}
+            <li><a href="/">{{ 'general.home' | t }}</a></li>
+            <li><a href="/collections/services">{{ 'general.services' | t }}</a></li>
+            <li><a href="/pages/about">{{ 'general.about' | t }}</a></li>
+            <li><a href="/pages/contact">{{ 'general.contact' | t }}</a></li>
+          {% endunless %}
         </ul>
       </div>
       
       <div class="footer-section">
-        <h4>معلومات التواصل</h4>
-        <p>البريد: sultan12quiet@gmail.com</p>
-        <p>الهاتف: 966534820384</p>
+        <h4>{{ section.settings.contact_title | default: 'معلومات التواصل' }}</h4>
+        <p>{{ section.settings.contact_email | default: settings.contact_email | default: 'البريد: support@quiethour.sa' }}</p>
+        <p>{{ section.settings.contact_phone | default: settings.contact_phone | default: 'الهاتف: 966500000000' }}</p>
       </div>
     </div>
     
     <div class="footer-bottom">
-      <p>&copy; {{ 'now' | date: '%Y' }} {{ store.name }}. جميع الحقوق محفوظة.</p>
+      <p>&copy; {{ 'now' | date: '%Y' }} {{ store.name }}. {{ section.settings.copyright | default: 'جميع الحقوق محفوظة.' }}</p>
       <p>
-        <a href="/pages/privacy">سياسة الخصوصية</a> | 
-        <a href="/pages/faq">الأسئلة الشائعة</a>
+        <a href="{{ section.settings.privacy_link | default: '/pages/privacy' }}">سياسة الخصوصية</a> | 
+        <a href="{{ section.settings.faq_link | default: '/pages/faq' }}">الأسئلة الشائعة</a>
       </p>
     </div>
   </div>
 </footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "عنوان القسم",
+      "default": "Quiet Hour Spa"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "وصف قصير",
+      "default": "منصة حجز خدمات السبا المميزة"
+    },
+    {
+      "type": "text",
+      "id": "links_title",
+      "label": "عنوان روابط سريعة",
+      "default": "روابط سريعة"
+    },
+    {
+      "type": "text",
+      "id": "link_1_title",
+      "label": "عنوان الرابط 1"
+    },
+    {
+      "type": "url",
+      "id": "link_1_url",
+      "label": "رابط 1"
+    },
+    {
+      "type": "text",
+      "id": "link_2_title",
+      "label": "عنوان الرابط 2"
+    },
+    {
+      "type": "url",
+      "id": "link_2_url",
+      "label": "رابط 2"
+    },
+    {
+      "type": "text",
+      "id": "link_3_title",
+      "label": "عنوان الرابط 3"
+    },
+    {
+      "type": "url",
+      "id": "link_3_url",
+      "label": "رابط 3"
+    },
+    {
+      "type": "text",
+      "id": "link_4_title",
+      "label": "عنوان الرابط 4"
+    },
+    {
+      "type": "url",
+      "id": "link_4_url",
+      "label": "رابط 4"
+    },
+    {
+      "type": "text",
+      "id": "contact_title",
+      "label": "عنوان معلومات التواصل",
+      "default": "معلومات التواصل"
+    },
+    {
+      "type": "text",
+      "id": "contact_email",
+      "label": "البريد الإلكتروني",
+      "default": "البريد: info@quiethour.sa"
+    },
+    {
+      "type": "text",
+      "id": "contact_phone",
+      "label": "رقم الهاتف",
+      "default": "الهاتف: 966500000000"
+    },
+    {
+      "type": "text",
+      "id": "privacy_link",
+      "label": "رابط سياسة الخصوصية",
+      "default": "/pages/privacy"
+    },
+    {
+      "type": "text",
+      "id": "faq_link",
+      "label": "رابط الأسئلة الشائعة",
+      "default": "/pages/faq"
+    },
+    {
+      "type": "text",
+      "id": "copyright",
+      "label": "نص الحقوق",
+      "default": "جميع الحقوق محفوظة."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Footer"
+    }
+  ]
+}
+{% endschema %}
 

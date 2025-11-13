@@ -1,0 +1,62 @@
+<section class="about-section">
+  <div class="container">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>{{ section.settings.title }}</h2>
+        <p>{{ section.settings.description }}</p>
+        {% if section.settings.points != blank %}
+          <ul class="about-points">
+            {% for point in section.settings.points | split: '\n' %}
+              {% if point != blank %}
+                <li>{{ point }}</li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+      {% if section.settings.image %}
+        <div class="about-image">
+          <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.title }}">
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "About",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "عنوان القسم",
+      "default": "عن Quiet Hour"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "الوصف",
+      "default": "Quiet Hour هو سبا فاخر يقدم تجربة حصرية لعملائنا مع أفضل الخبراء والعلاجات المميزة."
+    },
+    {
+      "type": "textarea",
+      "id": "points",
+      "label": "نقاط مميزة (سطر لكل نقطة)",
+      "default": "خبراء معتمدون عالميًا\nجلسات خاصة وعلاجية\nمنتجات عضوية عالية الجودة"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "صورة جانبية"
+    }
+  ],
+  "presets": [
+    {
+      "name": "About"
+    }
+  ]
+}
+{% endschema %}
+
+

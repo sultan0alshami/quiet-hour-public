@@ -1,0 +1,56 @@
+[
+  {
+    "name": "إعدادات الألوان",
+    "settings": [
+      {
+        "type": "color",
+        "id": "primary_color",
+        "label": "اللون الأساسي",
+        "default": "#4A3728"
+      },
+      {
+        "type": "color",
+        "id": "secondary_color",
+        "label": "اللون الثانوي",
+        "default": "#E8DCC6"
+      },
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "لون الخلفية",
+        "default": "#FFF8F0"
+      },
+      {
+        "type": "color",
+        "id": "accent_color",
+        "label": "لون التمييز",
+        "default": "#8B6F47"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "لون النص",
+        "default": "#2C2416"
+      }
+    ]
+  },
+  {
+    "name": "روابط التواصل",
+    "settings": [
+      {
+        "type": "text",
+        "id": "contact_email",
+        "label": "البريد الإلكتروني للدعم",
+        "default": "support@quiethour.sa"
+      },
+      {
+        "type": "text",
+        "id": "contact_phone",
+        "label": "رقم التواصل",
+        "default": "966500000000"
+      }
+    ]
+  }
+]
+
+
