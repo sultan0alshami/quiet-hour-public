@@ -1,45 +1,47 @@
 {
-  "version": "1.0.0",
-  "name": {
-    "ar": "ثيم كوَيت أور",
-    "en": "Quiet Hour Theme"
-  },
-  "description": {
-    "ar": "ثيم سبا مخصص لمنصات العناية والصحة على سلة.",
-    "en": "Premium spa booking storefront theme for Salla merchants."
-  },
-  "repository": "https://github.com/sultan0alshami/quiet-hour-theme",
-  "author_email": "sultan12quiet@gmail.com",
-  "support_url": "https://quiethour.sa/support",
-  "features": [
-    "color",
-    "fonts",
-    "breadcrumb"
-  ],
-  "settings": [
-    {
-      "type": "color",
-      "id": "primary_color",
-      "label": "اللون الأساسي",
-      "format": "color",
-      "value": "#4A3728"
+    "version": "1.0.0",
+    "name": {
+        "ar": "ثيم كوَيت أور",
+        "en": "Quiet Hour Theme"
     },
-    {
-      "type": "color",
-      "id": "secondary_color",
-      "label": "اللون الثانوي",
-      "format": "color",
-      "value": "#E8DCC6"
+    "description": {
+        "ar": "ثيم سبا مخصص لمنصات العناية والصحة على سلة.",
+        "en": "Premium spa booking storefront theme for Salla merchants."
     },
-    {
-      "type": "color",
-      "id": "background_color",
-      "label": "لون الخلفية",
-      "format": "color",
-      "value": "#FFF8F0"
-    }
-  ],
-  "components": []
+    "repository": "https://github.com/sultan0alshami/quiet-hour-theme",
+    "author_email": "sultan12quiet@gmail.com",
+    "support_url": "https://quiethour.sa/support",
+    "features": [
+        "color",
+        "fonts",
+        "breadcrumb",
+        "mega-menu",
+        "unite-cards-height",
+        "component-featured-products",
+        "component-fixed-banner"
+    ],
+    "settings": [
+        {
+            "type": "color",
+            "id": "primary_color",
+            "label": "اللون الأساسي",
+            "format": "color",
+            "value": "#4A3728"
+        },
+        {
+            "type": "color",
+            "id": "secondary_color",
+            "label": "اللون الثانوي",
+            "format": "color",
+            "value": "#E8DCC6"
+        },
+        {
+            "type": "color",
+            "id": "background_color",
+            "label": "لون الخلفية",
+            "format": "color",
+            "value": "#FFF8F0"
+        }
+    ],
+    "components": []
 }
-
-
