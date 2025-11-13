@@ -1,44 +1,85 @@
 {
-  "name": "Quiet Hour",
-  "slug": "quiet-hour",
   "version": "1.0.0",
-  "description": "Premium spa booking theme for Salla stores offering wellness and health services.",
-  "author": {
-    "name": "Sultan Alshami",
-    "email": "sultan12quiet@gmail.com",
-    "url": "https://quiethour.sa"
+  "name": {
+    "ar": "ثيم كوَيت أور",
+    "en": "Quiet Hour Theme"
   },
-  "support": {
-    "email": "support@quiethour.sa",
-    "url": "https://quiethour.sa/support"
+  "description": {
+    "ar": "ثيم سبا مخصص لمنصات العناية والصحة على سلة.",
+    "en": "Premium spa booking storefront theme for Salla merchants."
   },
   "repository": "https://github.com/sultan0alshami/quiet-hour-theme",
-  "categories": [
-    "health",
-    "beauty",
-    "services"
+  "author_email": "sultan12quiet@gmail.com",
+  "support_url": "https://quiethour.sa/support",
+  "features": [
+    "color",
+    "fonts",
+    "breadcrumb"
   ],
-  "tags": [
-    "spa",
-    "booking",
-    "rtl",
-    "premium"
+  "settings": [
+    {
+      "type": "color",
+      "id": "primary_color",
+      "label": "اللون الأساسي",
+      "format": "color",
+      "value": "#4A3728"
+    },
+    {
+      "type": "color",
+      "id": "secondary_color",
+      "label": "اللون الثانوي",
+      "format": "color",
+      "value": "#E8DCC6"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "لون الخلفية",
+      "format": "color",
+      "value": "#FFF8F0"
+    }
   ],
-  "layout": "layout/theme.liquid",
-  "templates": {
-    "index": "templates/index.liquid",
-    "product": "templates/product.liquid"
-  },
-  "sections": {
-    "header": "sections/header.liquid",
-    "footer": "sections/footer.liquid",
-    "hero": "sections/hero.liquid",
-    "services": "sections/services.liquid",
-    "about": "sections/about.liquid",
-    "testimonials": "sections/testimonials.liquid"
-  },
-  "locales": [
-    "locales/ar.json"
+  "components": [
+    {
+      "name": "hero-banner",
+      "title": {
+        "ar": "قسم البطل",
+        "en": "Hero Banner"
+      },
+      "icon": "sicon-image-carousel",
+      "path": "home.hero",
+      "fields": []
+    },
+    {
+      "name": "services-grid",
+      "title": {
+        "ar": "قسم الخدمات",
+        "en": "Services Grid"
+      },
+      "icon": "sicon-layout-grid",
+      "path": "home.services",
+      "fields": []
+    },
+    {
+      "name": "about-section",
+      "title": {
+        "ar": "من نحن",
+        "en": "About Section"
+      },
+      "icon": "sicon-info-circle",
+      "path": "home.about",
+      "fields": []
+    },
+    {
+      "name": "testimonials",
+      "title": {
+        "ar": "آراء العملاء",
+        "en": "Testimonials"
+      },
+      "icon": "sicon-chat-bubbles",
+      "path": "home.testimonials",
+      "fields": []
+    }
   ]
 }
 
