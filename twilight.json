@@ -1,0 +1,45 @@
+{
+  "name": "Quiet Hour",
+  "slug": "quiet-hour",
+  "version": "1.0.0",
+  "description": "Premium spa booking theme for Salla stores offering wellness and health services.",
+  "author": {
+    "name": "Sultan Alshami",
+    "email": "sultan12quiet@gmail.com",
+    "url": "https://quiethour.sa"
+  },
+  "support": {
+    "email": "support@quiethour.sa",
+    "url": "https://quiethour.sa/support"
+  },
+  "repository": "https://github.com/sultan0alshami/quiet-hour-theme",
+  "categories": [
+    "health",
+    "beauty",
+    "services"
+  ],
+  "tags": [
+    "spa",
+    "booking",
+    "rtl",
+    "premium"
+  ],
+  "layout": "layout/theme.liquid",
+  "templates": {
+    "index": "templates/index.liquid",
+    "product": "templates/product.liquid"
+  },
+  "sections": {
+    "header": "sections/header.liquid",
+    "footer": "sections/footer.liquid",
+    "hero": "sections/hero.liquid",
+    "services": "sections/services.liquid",
+    "about": "sections/about.liquid",
+    "testimonials": "sections/testimonials.liquid"
+  },
+  "locales": [
+    "locales/ar.json"
+  ]
+}
+
+
