@@ -1,0 +1,18 @@
+{
+  "name": "Quiet Hour",
+  "version": "1.0.0",
+  "description": "Premium spa booking theme for Salla",
+  "author": "Sultan Alshami",
+  "support": {
+    "email": "sultan12quiet@gmail.com",
+    "url": "https://quiethour.sa"
+  },
+  "settings": {
+    "color_scheme": {
+      "primary": "#4A3728",
+      "secondary": "#E8DCC6",
+      "background": "#FFF8F0"
+    }
+  }
+}
+

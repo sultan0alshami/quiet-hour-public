@@ -1,0 +1,32 @@
+{% comment %}
+  Header section - Navigation and logo
+{% endcomment %}
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <a href="/">
+          <img src="{{ 'logo.png' | asset_url }}" alt="{{ store.name }}">
+        </a>
+      </div>
+      
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/">الرئيسية</a></li>
+          <li><a href="/collections/services">الخدمات</a></li>
+          <li><a href="/pages/about">من نحن</a></li>
+          <li><a href="/pages/contact">اتصل بنا</a></li>
+        </ul>
+      </nav>
+      
+      <div class="header-actions">
+        <a href="/cart" class="cart-icon">
+          <span>السلة</span>
+          <span class="cart-count">{{ cart.item_count }}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+

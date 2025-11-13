@@ -1,0 +1,26 @@
+{
+  "general": {
+    "add_to_cart": "أضف إلى السلة",
+    "checkout": "الدفع",
+    "cart": "السلة",
+    "home": "الرئيسية",
+    "products": "المنتجات",
+    "services": "الخدمات",
+    "about": "من نحن",
+    "contact": "اتصل بنا"
+  },
+  "product": {
+    "price": "السعر",
+    "description": "الوصف",
+    "quantity": "الكمية",
+    "add_to_cart": "احجز الآن",
+    "out_of_stock": "غير متوفر"
+  },
+  "cart": {
+    "empty": "السلة فارغة",
+    "subtotal": "المجموع الفرعي",
+    "total": "المجموع",
+    "checkout": "إتمام الطلب"
+  }
+}
+

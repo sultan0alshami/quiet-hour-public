@@ -1,0 +1,9 @@
+# Files to ignore when publishing theme
+node_modules/
+.git/
+.env
+*.md
+README.md
+.gitignore
+.sallaignore
+

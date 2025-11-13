@@ -1,0 +1,39 @@
+{% comment %}
+  Footer section
+{% endcomment %}
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>{{ store.name }}</h3>
+        <p>منصة حجز خدمات السبا المميزة</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="/">الرئيسية</a></li>
+          <li><a href="/collections/services">الخدمات</a></li>
+          <li><a href="/pages/about">من نحن</a></li>
+          <li><a href="/pages/contact">اتصل بنا</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>معلومات التواصل</h4>
+        <p>البريد: sultan12quiet@gmail.com</p>
+        <p>الهاتف: 966534820384</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; {{ 'now' | date: '%Y' }} {{ store.name }}. جميع الحقوق محفوظة.</p>
+      <p>
+        <a href="/pages/privacy">سياسة الخصوصية</a> | 
+        <a href="/pages/faq">الأسئلة الشائعة</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
