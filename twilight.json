@@ -39,48 +39,7 @@
       "value": "#FFF8F0"
     }
   ],
-  "components": [
-    {
-      "name": "hero-banner",
-      "title": {
-        "ar": "قسم البطل",
-        "en": "Hero Banner"
-      },
-      "icon": "sicon-image-carousel",
-      "path": "home.hero",
-      "fields": []
-    },
-    {
-      "name": "services-grid",
-      "title": {
-        "ar": "قسم الخدمات",
-        "en": "Services Grid"
-      },
-      "icon": "sicon-layout-grid",
-      "path": "home.services",
-      "fields": []
-    },
-    {
-      "name": "about-section",
-      "title": {
-        "ar": "من نحن",
-        "en": "About Section"
-      },
-      "icon": "sicon-info-circle",
-      "path": "home.about",
-      "fields": []
-    },
-    {
-      "name": "testimonials",
-      "title": {
-        "ar": "آراء العملاء",
-        "en": "Testimonials"
-      },
-      "icon": "sicon-chat-bubbles",
-      "path": "home.testimonials",
-      "fields": []
-    }
-  ]
+  "components": []
 }
 
 
