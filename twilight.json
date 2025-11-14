@@ -62,6 +62,16 @@
             "icon": "sicon-store",
             "path": "components.fixed-banner",
             "fields": []
+        },
+        {
+            "key": "d691c513-3515-4797-9a26-ee6c0659342a",
+            "title": {
+                "en": "Photos Slider",
+                "ar": "شرائح الصور"
+            },
+            "icon": "sicon-store",
+            "path": "components.photos-slider",
+            "fields": []
         }
     ]
 }
