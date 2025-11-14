@@ -15,9 +15,7 @@
         "color",
         "fonts",
         "breadcrumb",
-        "unite-cards-height",
-        "component-featured-products",
-        "component-fixed-banner"
+        "component-testimonials"
     ],
     "settings": [
         {
