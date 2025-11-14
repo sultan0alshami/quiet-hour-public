@@ -162,6 +162,16 @@
             "icon": "sicon-store",
             "path": "components.services",
             "fields": []
+        },
+        {
+            "key": "eff7d341-a7c5-4a49-8089-49888558d0e6",
+            "title": {
+                "en": "About Section",
+                "ar": "قسم من نحن"
+            },
+            "icon": "sicon-store",
+            "path": "components.about",
+            "fields": []
         }
     ]
 }
