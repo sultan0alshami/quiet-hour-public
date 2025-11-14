@@ -172,6 +172,16 @@
             "icon": "sicon-store",
             "path": "components.about",
             "fields": []
+        },
+        {
+            "key": "a1dc5455-33fb-4362-ae1d-f188e81dc7d2",
+            "title": {
+                "en": "Testimonials",
+                "ar": "شهادات العملاء"
+            },
+            "icon": "sicon-store",
+            "path": "components.testimonials",
+            "fields": []
         }
     ]
 }
