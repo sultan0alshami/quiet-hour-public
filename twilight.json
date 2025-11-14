@@ -122,6 +122,16 @@
             "icon": "sicon-store",
             "path": "components.store-features",
             "fields": []
+        },
+        {
+            "key": "88bfab10-3158-4f9d-99fa-97ab8357ed7c",
+            "title": {
+                "en": "YouTube Video",
+                "ar": "فيديو يوتيوب"
+            },
+            "icon": "sicon-store",
+            "path": "components.youtube",
+            "fields": []
         }
     ]
 }
