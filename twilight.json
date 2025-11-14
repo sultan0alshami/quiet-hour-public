@@ -15,7 +15,18 @@
         "color",
         "fonts",
         "breadcrumb",
-        "component-testimonials"
+        "component-testimonials",
+        "unite-cards-height",
+        "component-featured-products",
+        "component-fixed-banner",
+        "component-fixed-products",
+        "component-photos-slider",
+        "component-products-slider",
+        "component-parallax-background",
+        "component-random-testimonials",
+        "component-square-photos",
+        "component-store-features",
+        "component-youtube"
     ],
     "settings": [
         {
