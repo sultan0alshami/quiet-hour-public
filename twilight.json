@@ -72,6 +72,16 @@
             "icon": "sicon-store",
             "path": "components.photos-slider",
             "fields": []
+        },
+        {
+            "key": "a443cfda-f68a-40c7-9885-379aa0b7ffa9",
+            "title": {
+                "en": "Products Slider",
+                "ar": "شرائح المنتجات"
+            },
+            "icon": "sicon-store",
+            "path": "components.products-slider",
+            "fields": []
         }
     ]
 }
