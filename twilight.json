@@ -92,6 +92,16 @@
             "icon": "sicon-store",
             "path": "components.parallax-background",
             "fields": []
+        },
+        {
+            "key": "c6c0be7c-66f9-4595-b6ff-994869e16db2",
+            "title": {
+                "en": "Random Testimonials",
+                "ar": "توصيات عشوائية"
+            },
+            "icon": "sicon-store",
+            "path": "components.random-testimonials",
+            "fields": []
         }
     ]
 }
