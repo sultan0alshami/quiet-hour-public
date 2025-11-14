@@ -62,16 +62,6 @@
             "icon": "sicon-store",
             "path": "components.fixed-banner",
             "fields": []
-        },
-        {
-            "key": "5ce512ce-d3cd-4738-9b6a-e92ff5112fab",
-            "title": {
-                "en": "Fixed Products",
-                "ar": "منتجات ثابتة"
-            },
-            "icon": "sicon-store",
-            "path": "fixed-products",
-            "fields": []
         }
     ]
 }
