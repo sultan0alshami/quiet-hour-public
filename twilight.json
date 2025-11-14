@@ -112,6 +112,16 @@
             "icon": "sicon-store",
             "path": "components.square-photos",
             "fields": []
+        },
+        {
+            "key": "46cd056e-4c45-4644-abc2-bff18fb664be",
+            "title": {
+                "en": "Store Features",
+                "ar": "مزايا المتجر"
+            },
+            "icon": "sicon-store",
+            "path": "components.store-features",
+            "fields": []
         }
     ]
 }
