@@ -64,16 +64,6 @@
             "fields": []
         },
         {
-            "key": "c1f5620c-87e5-472c-aacf-5cec3c363b08",
-            "title": {
-                "en": "Fixed Banner",
-                "ar": "بانر ثابت"
-            },
-            "icon": "sicon-store",
-            "path": "fixed-banner",
-            "fields": []
-        },
-        {
             "key": "5ce512ce-d3cd-4738-9b6a-e92ff5112fab",
             "title": {
                 "en": "Fixed Products",
