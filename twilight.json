@@ -82,6 +82,16 @@
             "icon": "sicon-store",
             "path": "components.products-slider",
             "fields": []
+        },
+        {
+            "key": "e4b8021d-3333-483c-a144-acb12c4bf6b6",
+            "title": {
+                "en": "Parallax Background",
+                "ar": "منظر الخلفية"
+            },
+            "icon": "sicon-store",
+            "path": "components.parallax-background",
+            "fields": []
         }
     ]
 }
