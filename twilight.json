@@ -51,5 +51,16 @@
             "value": "#FFF8F0"
         }
     ],
-    "components": []
+    "components": [
+        {
+            "key": "823ea62f-8352-43d0-9712-71c51250b1a8",
+            "title": {
+                "en": "Fixed Banner",
+                "ar": "بانر ثابت"
+            },
+            "icon": "sicon-store",
+            "path": "components.fixed-banner",
+            "fields": []
+        }
+    ]
 }
