@@ -132,6 +132,16 @@
             "icon": "sicon-store",
             "path": "components.youtube",
             "fields": []
+        },
+        {
+            "key": "d9518751-069e-4825-a8af-5fb71143ff28",
+            "title": {
+                "en": "Featured Products",
+                "ar": "منتجات مميزة"
+            },
+            "icon": "sicon-store",
+            "path": "components.featured-products",
+            "fields": []
         }
     ]
 }
