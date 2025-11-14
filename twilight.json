@@ -152,6 +152,16 @@
             "icon": "sicon-store",
             "path": "components.hero",
             "fields": []
+        },
+        {
+            "key": "f3692d6b-73f0-4a40-91cc-cc3bb013b07a",
+            "title": {
+                "en": "Services Section",
+                "ar": "قسم الخدمات"
+            },
+            "icon": "sicon-store",
+            "path": "components.services",
+            "fields": []
         }
     ]
 }
