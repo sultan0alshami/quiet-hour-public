@@ -59,7 +59,7 @@
                 "en": "Fixed Banner",
                 "ar": "بانر ثابت"
             },
-            "icon": "sicon-store",
+            "icon": "sicon-computer",
             "path": "components.fixed-banner",
             "fields": []
         },
