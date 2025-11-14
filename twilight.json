@@ -182,6 +182,16 @@
             "icon": "sicon-store",
             "path": "components.testimonials",
             "fields": []
+        },
+        {
+            "key": "a27d0d7b-6a41-4157-865d-a34d0762c812",
+            "title": {
+                "en": "Fixed Products",
+                "ar": "منتجات ثابتة"
+            },
+            "icon": "sicon-store",
+            "path": "components.fixed-products",
+            "fields": []
         }
     ]
 }
