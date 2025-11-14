@@ -102,6 +102,16 @@
             "icon": "sicon-store",
             "path": "components.random-testimonials",
             "fields": []
+        },
+        {
+            "key": "88d0f4bb-cef0-436b-9946-2732d3f0f947",
+            "title": {
+                "en": "Square Photos",
+                "ar": "صور مربعة"
+            },
+            "icon": "sicon-store",
+            "path": "components.square-photos",
+            "fields": []
         }
     ]
 }
