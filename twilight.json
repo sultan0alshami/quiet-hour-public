@@ -142,6 +142,16 @@
             "icon": "sicon-store",
             "path": "components.featured-products",
             "fields": []
+        },
+        {
+            "key": "f750c8fd-03a3-49e6-9253-008c6ddd17aa",
+            "title": {
+                "en": "Hero Section",
+                "ar": "قسم البطل"
+            },
+            "icon": "sicon-store",
+            "path": "components.hero",
+            "fields": []
         }
     ]
 }
