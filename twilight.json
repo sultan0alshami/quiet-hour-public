@@ -61,6 +61,16 @@
             "icon": "sicon-store",
             "path": "components.fixed-banner",
             "fields": []
+        },
+        {
+            "key": "c1f5620c-87e5-472c-aacf-5cec3c363b08",
+            "title": {
+                "en": "Fixed Banner",
+                "ar": "بانر ثابت"
+            },
+            "icon": "sicon-store",
+            "path": "fixed-banner",
+            "fields": []
         }
     ]
 }
