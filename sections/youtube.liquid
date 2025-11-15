@@ -1,0 +1,57 @@
+{% comment %}
+  YouTube Section - Embedded YouTube video
+{% endcomment %}
+
+<section class="youtube-section">
+  <div class="container">
+    {% if section.settings.title %}
+      <h2 class="section-title">{{ section.settings.title }}</h2>
+    {% endif %}
+    <div class="youtube-wrapper">
+      {% if section.settings.youtube_id %}
+        <iframe 
+          width="100%" 
+          height="500" 
+          src="https://www.youtube.com/embed/{{ section.settings.youtube_id }}{% if section.settings.autoplay %}?autoplay=1{% endif %}" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      {% else %}
+        <p class="youtube-placeholder">يرجى إدخال معرف فيديو YouTube</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "YouTube",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "عنوان القسم"
+    },
+    {
+      "type": "text",
+      "id": "youtube_id",
+      "label": "معرف فيديو YouTube",
+      "info": "أدخل المعرف فقط (مثال: dQw4w9WgXcQ) أو الرابط الكامل",
+      "required": true
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "تشغيل تلقائي",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "YouTube"
+    }
+  ]
+}
+{% endschema %}
+

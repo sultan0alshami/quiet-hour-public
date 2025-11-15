@@ -32,6 +32,9 @@
       </div>
     </div>
   </div>
+  {% if section.settings.enable_mega_menu %}
+    {% section 'mega-menu' %}
+  {% endif %}
 </header>
 
 {% schema %}
@@ -42,6 +45,12 @@
       "type": "image_picker",
       "id": "logo",
       "label": "شعار المتجر"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_mega_menu",
+      "label": "تفعيل ميجا منيو",
+      "default": false
     }
   ],
   "presets": [

@@ -1,0 +1,142 @@
+{% comment %}
+  Mega Menu Section - Multi-level navigation with dropdowns
+{% endcomment %}
+
+<nav class="mega-menu" data-mega-menu>
+  <div class="container">
+    <ul class="mega-menu-list">
+      {% for block in section.blocks %}
+        <li class="mega-menu-item{% if block.settings.has_dropdown %} has-dropdown{% endif %}">
+          <a href="{{ block.settings.link }}" class="mega-menu-link">
+            {{ block.settings.title }}
+            {% if block.settings.has_dropdown %}
+              <span class="dropdown-arrow">▼</span>
+            {% endif %}
+          </a>
+          {% if block.settings.has_dropdown %}
+            <div class="mega-menu-dropdown">
+              <div class="mega-menu-content">
+                {% if block.settings.image %}
+                  <div class="mega-menu-image">
+                    <img src="{{ block.settings.image | img_url: '300x' }}" alt="{{ block.settings.title }}">
+                  </div>
+                {% endif %}
+                <div class="mega-menu-links">
+                  {% for i in (1..6) %}
+                    {% assign link_key = 'link_' | append: i %}
+                    {% assign title_key = 'title_' | append: i %}
+                    {% if block.settings[title_key] %}
+                      <a href="{{ block.settings[link_key] }}">{{ block.settings[title_key] }}</a>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+
+{% schema %}
+{
+  "name": "Mega Menu",
+  "blocks": [
+    {
+      "type": "menu_item",
+      "name": "عنصر القائمة",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "العنوان",
+          "default": "القائمة"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "الرابط"
+        },
+        {
+          "type": "checkbox",
+          "id": "has_dropdown",
+          "label": "يحتوي على قائمة منسدلة",
+          "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "صورة القائمة (اختياري)"
+        },
+        {
+          "type": "text",
+          "id": "title_1",
+          "label": "عنوان الرابط 1"
+        },
+        {
+          "type": "url",
+          "id": "link_1",
+          "label": "الرابط 1"
+        },
+        {
+          "type": "text",
+          "id": "title_2",
+          "label": "عنوان الرابط 2"
+        },
+        {
+          "type": "url",
+          "id": "link_2",
+          "label": "الرابط 2"
+        },
+        {
+          "type": "text",
+          "id": "title_3",
+          "label": "عنوان الرابط 3"
+        },
+        {
+          "type": "url",
+          "id": "link_3",
+          "label": "الرابط 3"
+        },
+        {
+          "type": "text",
+          "id": "title_4",
+          "label": "عنوان الرابط 4"
+        },
+        {
+          "type": "url",
+          "id": "link_4",
+          "label": "الرابط 4"
+        },
+        {
+          "type": "text",
+          "id": "title_5",
+          "label": "عنوان الرابط 5"
+        },
+        {
+          "type": "url",
+          "id": "link_5",
+          "label": "الرابط 5"
+        },
+        {
+          "type": "text",
+          "id": "title_6",
+          "label": "عنوان الرابط 6"
+        },
+        {
+          "type": "url",
+          "id": "link_6",
+          "label": "الرابط 6"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Mega Menu"
+    }
+  ]
+}
+{% endschema %}
+

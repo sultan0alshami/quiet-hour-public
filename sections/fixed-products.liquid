@@ -1,0 +1,88 @@
+{% comment %}
+  Fixed Products Section - Static product grid display
+{% endcomment %}
+
+<section class="fixed-products-section">
+  <div class="container">
+    {% if section.settings.title %}
+      <h2 class="section-title">{{ section.settings.title }}</h2>
+    {% endif %}
+    <div class="fixed-products-grid{% if section.settings.unite_height %} unite-cards-height{% endif %}">
+      {% for block in section.blocks limit: section.settings.products_count %}
+        {% assign product = all_products[block.settings.product] %}
+        {% if product %}
+          <div class="product-card">
+            <a href="{{ product.url }}">
+              {% if product.featured_image %}
+                <div class="product-image">
+                  <img src="{{ product.featured_image | img_url: '400x400' }}" alt="{{ product.title }}">
+                  {% if product.compare_at_price > product.price %}
+                    <span class="sale-badge">خصم</span>
+                  {% endif %}
+                </div>
+              {% endif %}
+              <div class="product-info">
+                <h3>{{ product.title }}</h3>
+                <p class="price">
+                  {{ product.price | money }}
+                  {% if product.compare_at_price > product.price %}
+                    <span class="compare-price">{{ product.compare_at_price | money }}</span>
+                  {% endif %}
+                </p>
+              </div>
+            </a>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Fixed Products",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "عنوان القسم",
+      "default": "منتجات مميزة"
+    },
+    {
+      "type": "range",
+      "id": "products_count",
+      "label": "عدد المنتجات",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "checkbox",
+      "id": "unite_height",
+      "label": "توحيد ارتفاع البطاقات",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "منتج",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "اختر المنتج"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Fixed Products"
+    }
+  ]
+}
+{% endschema %}
+

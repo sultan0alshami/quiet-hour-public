@@ -1,0 +1,100 @@
+{% comment %}
+  Random Testimonials Section - Shuffled testimonial display
+{% endcomment %}
+
+<section class="random-testimonials-section">
+  <div class="container">
+    {% if section.settings.title %}
+      <h2 class="section-title">{{ section.settings.title }}</h2>
+    {% endif %}
+    <div class="testimonials-grid">
+      {% assign shuffled_blocks = section.blocks | shuffle %}
+      {% for block in shuffled_blocks limit: section.settings.display_count %}
+        <div class="testimonial-card">
+          {% if block.settings.avatar %}
+            <img src="{{ block.settings.avatar | img_url: '100x100' }}" alt="{{ block.settings.name }}" class="avatar">
+          {% endif %}
+          <div class="stars">
+            {% for i in (1..block.settings.rating) %}
+              ★
+            {% endfor %}
+          </div>
+          <p class="message">"{{ block.settings.message }}"</p>
+          <p class="name">{{ block.settings.name }}</p>
+          {% if block.settings.role %}
+            <p class="role">{{ block.settings.role }}</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Random Testimonials",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "عنوان القسم",
+      "default": "آراء عملائنا"
+    },
+    {
+      "type": "range",
+      "id": "display_count",
+      "label": "عدد الشهادات المعروضة",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "default": 3
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "شهادة",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "avatar",
+          "label": "صورة العميل"
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "label": "التقييم",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "textarea",
+          "id": "message",
+          "label": "نص الشهادة",
+          "required": true
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "اسم العميل",
+          "required": true
+        },
+        {
+          "type": "text",
+          "id": "role",
+          "label": "وصف العميل (اختياري)"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "presets": [
+    {
+      "name": "Random Testimonials"
+    }
+  ]
+}
+{% endschema %}
+

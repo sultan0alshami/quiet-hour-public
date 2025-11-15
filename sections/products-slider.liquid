@@ -1,0 +1,81 @@
+{% comment %}
+  Products Slider Section - Horizontal product carousel
+{% endcomment %}
+
+<section class="products-slider-section">
+  <div class="container">
+    {% if section.settings.title %}
+      <h2 class="section-title">{{ section.settings.title }}</h2>
+    {% endif %}
+    <div class="products-slider-wrapper">
+      <div class="products-slider" data-products-slider>
+        {% for block in section.blocks %}
+          {% assign product = all_products[block.settings.product] %}
+          {% if product %}
+            <div class="product-slide">
+              <a href="{{ product.url }}" class="product-card">
+                {% if product.featured_image %}
+                  <div class="product-image">
+                    <img src="{{ product.featured_image | img_url: '400x400' }}" alt="{{ product.title }}">
+                    {% if product.compare_at_price > product.price %}
+                      <span class="sale-badge">خصم</span>
+                    {% endif %}
+                  </div>
+                {% endif %}
+                <div class="product-info">
+                  <h3>{{ product.title }}</h3>
+                  <p class="price">
+                    {{ product.price | money }}
+                    {% if product.compare_at_price > product.price %}
+                      <span class="compare-price">{{ product.compare_at_price | money }}</span>
+                    {% endif %}
+                  </p>
+                </div>
+              </a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% if section.blocks.size > 1 %}
+        <div class="slider-controls">
+          <button class="prev-btn" data-prev aria-label="السابق">‹</button>
+          <button class="next-btn" data-next aria-label="التالي">›</button>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Products Slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "عنوان القسم",
+      "default": "منتجات مميزة"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "منتج",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "اختر المنتج"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "presets": [
+    {
+      "name": "Products Slider"
+    }
+  ]
+}
+{% endschema %}
+

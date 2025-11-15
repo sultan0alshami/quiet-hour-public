@@ -1,197 +1,197 @@
 {
-    "version": "1.0.0",
-    "name": {
-        "ar": "ثيم ساعة هدؤ",
-        "en": "Quiet Hour Theme"
+  "version": "1.0.0",
+  "name": {
+    "ar": "ثيم ساعة هدؤ",
+    "en": "Quiet Hour Theme"
+  },
+  "description": {
+    "ar": "ثيم سبا مخصص لمنصات العناية والصحة على سلة.",
+    "en": "Premium spa booking storefront theme for Salla merchants."
+  },
+  "repository": "https://github.com/sultan0alshami/quiet-hour-theme",
+  "author_email": "sultan12quiet@gmail.com",
+  "support_url": "https://quiethour.sa/support",
+  "features": [
+    "color",
+    "fonts",
+    "breadcrumb",
+    "component-testimonials",
+    "unite-cards-height",
+    "component-featured-products",
+    "component-fixed-banner",
+    "component-fixed-products",
+    "component-photos-slider",
+    "component-products-slider",
+    "component-parallax-background",
+    "component-random-testimonials",
+    "component-square-photos",
+    "component-store-features",
+    "component-youtube",
+    "mega-menu"
+  ],
+  "settings": [
+    {
+      "type": "color",
+      "id": "primary_color",
+      "label": "اللون الأساسي",
+      "format": "color",
+      "value": "#4A3728"
     },
-    "description": {
-        "ar": "ثيم سبا مخصص لمنصات العناية والصحة على سلة.",
-        "en": "Premium spa booking storefront theme for Salla merchants."
+    {
+      "type": "color",
+      "id": "secondary_color",
+      "label": "اللون الثانوي",
+      "format": "color",
+      "value": "#E8DCC6"
     },
-    "repository": "https://github.com/sultan0alshami/quiet-hour-theme",
-    "author_email": "sultan12quiet@gmail.com",
-    "support_url": "https://quiethour.sa/support",
-    "features": [
-        "color",
-        "fonts",
-        "breadcrumb",
-        "component-testimonials",
-        "unite-cards-height",
-        "component-featured-products",
-        "component-fixed-banner",
-        "component-fixed-products",
-        "component-photos-slider",
-        "component-products-slider",
-        "component-parallax-background",
-        "component-random-testimonials",
-        "component-square-photos",
-        "component-store-features",
-        "component-youtube",
-        "mega-menu"
-    ],
-    "settings": [
-        {
-            "type": "color",
-            "id": "primary_color",
-            "label": "اللون الأساسي",
-            "format": "color",
-            "value": "#4A3728"
-        },
-        {
-            "type": "color",
-            "id": "secondary_color",
-            "label": "اللون الثانوي",
-            "format": "color",
-            "value": "#E8DCC6"
-        },
-        {
-            "type": "color",
-            "id": "background_color",
-            "label": "لون الخلفية",
-            "format": "color",
-            "value": "#FFF8F0"
-        }
-    ],
-    "components": [
-        {
-            "key": "823ea62f-8352-43d0-9712-71c51250b1a8",
-            "title": {
-                "en": "Fixed Banner",
-                "ar": "بانر ثابت"
-            },
-            "icon": "sicon-computer",
-            "path": "components.fixed-banner",
-            "fields": []
-        },
-        {
-            "key": "d691c513-3515-4797-9a26-ee6c0659342a",
-            "title": {
-                "en": "Photos Slider",
-                "ar": "شرائح الصور"
-            },
-            "icon": "sicon-store",
-            "path": "components.photos-slider",
-            "fields": []
-        },
-        {
-            "key": "a443cfda-f68a-40c7-9885-379aa0b7ffa9",
-            "title": {
-                "en": "Products Slider",
-                "ar": "شرائح المنتجات"
-            },
-            "icon": "sicon-store",
-            "path": "components.products-slider",
-            "fields": []
-        },
-        {
-            "key": "e4b8021d-3333-483c-a144-acb12c4bf6b6",
-            "title": {
-                "en": "Parallax Background",
-                "ar": "منظر الخلفية"
-            },
-            "icon": "sicon-store",
-            "path": "components.parallax-background",
-            "fields": []
-        },
-        {
-            "key": "c6c0be7c-66f9-4595-b6ff-994869e16db2",
-            "title": {
-                "en": "Random Testimonials",
-                "ar": "توصيات عشوائية"
-            },
-            "icon": "sicon-store",
-            "path": "components.random-testimonials",
-            "fields": []
-        },
-        {
-            "key": "88d0f4bb-cef0-436b-9946-2732d3f0f947",
-            "title": {
-                "en": "Square Photos",
-                "ar": "صور مربعة"
-            },
-            "icon": "sicon-store",
-            "path": "components.square-photos",
-            "fields": []
-        },
-        {
-            "key": "46cd056e-4c45-4644-abc2-bff18fb664be",
-            "title": {
-                "en": "Store Features",
-                "ar": "مزايا المتجر"
-            },
-            "icon": "sicon-store",
-            "path": "components.store-features",
-            "fields": []
-        },
-        {
-            "key": "88bfab10-3158-4f9d-99fa-97ab8357ed7c",
-            "title": {
-                "en": "YouTube Video",
-                "ar": "فيديو يوتيوب"
-            },
-            "icon": "sicon-store",
-            "path": "components.youtube",
-            "fields": []
-        },
-        {
-            "key": "d9518751-069e-4825-a8af-5fb71143ff28",
-            "title": {
-                "en": "Featured Products",
-                "ar": "منتجات مميزة"
-            },
-            "icon": "sicon-store",
-            "path": "components.featured-products",
-            "fields": []
-        },
-        {
-            "key": "f750c8fd-03a3-49e6-9253-008c6ddd17aa",
-            "title": {
-                "en": "Hero Section",
-                "ar": "قسم البطل"
-            },
-            "icon": "sicon-store",
-            "path": "components.hero",
-            "fields": []
-        },
-        {
-            "key": "f3692d6b-73f0-4a40-91cc-cc3bb013b07a",
-            "title": {
-                "en": "Services Section",
-                "ar": "قسم الخدمات"
-            },
-            "icon": "sicon-store",
-            "path": "components.services",
-            "fields": []
-        },
-        {
-            "key": "eff7d341-a7c5-4a49-8089-49888558d0e6",
-            "title": {
-                "en": "About Section",
-                "ar": "قسم من نحن"
-            },
-            "icon": "sicon-store",
-            "path": "components.about",
-            "fields": []
-        },
-        {
-            "key": "a1dc5455-33fb-4362-ae1d-f188e81dc7d2",
-            "title": {
-                "en": "Testimonials",
-                "ar": "شهادات العملاء"
-            },
-            "icon": "sicon-store",
-            "path": "components.testimonials",
-            "fields": []
-        },
-        {
-            "key": "a27d0d7b-6a41-4157-865d-a34d0762c812",
-            "title": {
-                "en": "Fixed Products",
-                "ar": "منتجات ثابتة"
-            },
-            "icon": "sicon-store",
-            "path": "components.fixed-products",
-            "fields": []
-        }
-    ]
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "لون الخلفية",
+      "format": "color",
+      "value": "#FFF8F0"
+    }
+  ],
+  "components": [
+    {
+      "key": "823ea62f-8352-43d0-9712-71c51250b1a8",
+      "title": {
+        "en": "Fixed Banner",
+        "ar": "بانر ثابت"
+      },
+      "icon": "sicon-computer",
+      "path": "components.fixed-banner",
+      "fields": []
+    },
+    {
+      "key": "d691c513-3515-4797-9a26-ee6c0659342a",
+      "title": {
+        "en": "Photos Slider",
+        "ar": "شرائح الصور"
+      },
+      "icon": "sicon-store",
+      "path": "components.photos-slider",
+      "fields": []
+    },
+    {
+      "key": "a443cfda-f68a-40c7-9885-379aa0b7ffa9",
+      "title": {
+        "en": "Products Slider",
+        "ar": "شرائح المنتجات"
+      },
+      "icon": "sicon-store",
+      "path": "components.products-slider",
+      "fields": []
+    },
+    {
+      "key": "e4b8021d-3333-483c-a144-acb12c4bf6b6",
+      "title": {
+        "en": "Parallax Background",
+        "ar": "منظر الخلفية"
+      },
+      "icon": "sicon-store",
+      "path": "components.parallax-background",
+      "fields": []
+    },
+    {
+      "key": "c6c0be7c-66f9-4595-b6ff-994869e16db2",
+      "title": {
+        "en": "Random Testimonials",
+        "ar": "توصيات عشوائية"
+      },
+      "icon": "sicon-store",
+      "path": "components.random-testimonials",
+      "fields": []
+    },
+    {
+      "key": "88d0f4bb-cef0-436b-9946-2732d3f0f947",
+      "title": {
+        "en": "Square Photos",
+        "ar": "صور مربعة"
+      },
+      "icon": "sicon-store",
+      "path": "components.square-photos",
+      "fields": []
+    },
+    {
+      "key": "46cd056e-4c45-4644-abc2-bff18fb664be",
+      "title": {
+        "en": "Store Features",
+        "ar": "مزايا المتجر"
+      },
+      "icon": "sicon-store",
+      "path": "components.store-features",
+      "fields": []
+    },
+    {
+      "key": "88bfab10-3158-4f9d-99fa-97ab8357ed7c",
+      "title": {
+        "en": "YouTube Video",
+        "ar": "فيديو يوتيوب"
+      },
+      "icon": "sicon-store",
+      "path": "components.youtube",
+      "fields": []
+    },
+    {
+      "key": "d9518751-069e-4825-a8af-5fb71143ff28",
+      "title": {
+        "en": "Featured Products",
+        "ar": "منتجات مميزة"
+      },
+      "icon": "sicon-store",
+      "path": "components.featured-products",
+      "fields": []
+    },
+    {
+      "key": "f750c8fd-03a3-49e6-9253-008c6ddd17aa",
+      "title": {
+        "en": "Hero Section",
+        "ar": "قسم البطل"
+      },
+      "icon": "sicon-store",
+      "path": "components.hero",
+      "fields": []
+    },
+    {
+      "key": "f3692d6b-73f0-4a40-91cc-cc3bb013b07a",
+      "title": {
+        "en": "Services Section",
+        "ar": "قسم الخدمات"
+      },
+      "icon": "sicon-store",
+      "path": "components.services",
+      "fields": []
+    },
+    {
+      "key": "eff7d341-a7c5-4a49-8089-49888558d0e6",
+      "title": {
+        "en": "About Section",
+        "ar": "قسم من نحن"
+      },
+      "icon": "sicon-store",
+      "path": "components.about",
+      "fields": []
+    },
+    {
+      "key": "a1dc5455-33fb-4362-ae1d-f188e81dc7d2",
+      "title": {
+        "en": "Testimonials",
+        "ar": "شهادات العملاء"
+      },
+      "icon": "sicon-store",
+      "path": "components.testimonials",
+      "fields": []
+    },
+    {
+      "key": "a27d0d7b-6a41-4157-865d-a34d0762c812",
+      "title": {
+        "en": "Fixed Products",
+        "ar": "منتجات ثابتة"
+      },
+      "icon": "sicon-store",
+      "path": "components.fixed-products",
+      "fields": []
+    }
+  ]
 }
