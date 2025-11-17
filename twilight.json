@@ -61,7 +61,74 @@
       },
       "icon": "sicon-computer",
       "path": "components.fixed-banner",
-      "fields": []
+      "fields": {
+        "name": "Fixed Banner",
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "enable",
+            "label": "تفعيل البانر",
+            "default": false
+          },
+          {
+            "type": "select",
+            "id": "position",
+            "label": "موضع البانر",
+            "options": [
+              {
+                "value": "fixed",
+                "label": "ثابت (Fixed)"
+              },
+              {
+                "value": "sticky",
+                "label": "لاصق (Sticky)"
+              },
+              {
+                "value": "relative",
+                "label": "عادي (Relative)"
+              }
+            ],
+            "default": "fixed"
+          },
+          {
+            "type": "image_picker",
+            "id": "background_image",
+            "label": "صورة الخلفية"
+          },
+          {
+            "type": "color",
+            "id": "background_color",
+            "label": "لون الخلفية",
+            "default": "#4A3728"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "العنوان"
+          },
+          {
+            "type": "textarea",
+            "id": "description",
+            "label": "الوصف"
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "نص الزر"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "رابط الزر"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_close",
+            "label": "إظهار زر الإغلاق",
+            "default": true
+          }
+        ]
+      }
     },
     {
       "key": "d691c513-3515-4797-9a26-ee6c0659342a",
@@ -71,7 +138,41 @@
       },
       "icon": "sicon-store",
       "path": "components.photos-slider",
-      "fields": []
+      "fields": {
+        "name": "Photos Slider",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "عنوان القسم"
+          }
+        ],
+        "blocks": [
+          {
+            "type": "slide",
+            "name": "شريحة",
+            "settings": [
+              {
+                "type": "image_picker",
+                "id": "image",
+                "label": "الصورة",
+                "required": true
+              },
+              {
+                "type": "text",
+                "id": "alt_text",
+                "label": "النص البديل"
+              },
+              {
+                "type": "text",
+                "id": "caption",
+                "label": "التعليق (اختياري)"
+              }
+            ]
+          }
+        ],
+        "max_blocks": 10
+      }
     },
     {
       "key": "a443cfda-f68a-40c7-9885-379aa0b7ffa9",
@@ -81,7 +182,31 @@
       },
       "icon": "sicon-store",
       "path": "components.products-slider",
-      "fields": []
+      "fields": {
+        "name": "Products Slider",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "عنوان القسم",
+            "default": "منتجات مميزة"
+          }
+        ],
+        "blocks": [
+          {
+            "type": "product",
+            "name": "منتج",
+            "settings": [
+              {
+                "type": "product",
+                "id": "product",
+                "label": "اختر المنتج"
+              }
+            ]
+          }
+        ],
+        "max_blocks": 20
+      }
     },
     {
       "key": "e4b8021d-3333-483c-a144-acb12c4bf6b6",
@@ -91,7 +216,46 @@
       },
       "icon": "sicon-store",
       "path": "components.parallax-background",
-      "fields": []
+      "fields": {
+        "name": "Parallax Background",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "background_image",
+            "label": "صورة الخلفية",
+            "required": true
+          },
+          {
+            "type": "range",
+            "id": "opacity",
+            "label": "الشفافية",
+            "min": 0.1,
+            "max": 1,
+            "step": 0.1,
+            "default": 0.7
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "العنوان"
+          },
+          {
+            "type": "textarea",
+            "id": "description",
+            "label": "الوصف"
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "نص الزر"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "رابط الزر"
+          }
+        ]
+      }
     },
     {
       "key": "c6c0be7c-66f9-4595-b6ff-994869e16db2",
@@ -101,7 +265,66 @@
       },
       "icon": "sicon-store",
       "path": "components.random-testimonials",
-      "fields": []
+      "fields": {
+        "name": "Random Testimonials",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "عنوان القسم",
+            "default": "آراء عملائنا"
+          },
+          {
+            "type": "range",
+            "id": "display_count",
+            "label": "عدد الشهادات المعروضة",
+            "min": 2,
+            "max": 6,
+            "step": 1,
+            "default": 3
+          }
+        ],
+        "blocks": [
+          {
+            "type": "testimonial",
+            "name": "شهادة",
+            "settings": [
+              {
+                "type": "image_picker",
+                "id": "avatar",
+                "label": "صورة العميل"
+              },
+              {
+                "type": "range",
+                "id": "rating",
+                "label": "التقييم",
+                "min": 1,
+                "max": 5,
+                "step": 1,
+                "default": 5
+              },
+              {
+                "type": "textarea",
+                "id": "message",
+                "label": "نص الشهادة",
+                "required": true
+              },
+              {
+                "type": "text",
+                "id": "name",
+                "label": "اسم العميل",
+                "required": true
+              },
+              {
+                "type": "text",
+                "id": "role",
+                "label": "وصف العميل (اختياري)"
+              }
+            ]
+          }
+        ],
+        "max_blocks": 20
+      }
     },
     {
       "key": "88d0f4bb-cef0-436b-9946-2732d3f0f947",
@@ -111,7 +334,46 @@
       },
       "icon": "sicon-store",
       "path": "components.square-photos",
-      "fields": []
+      "fields": {
+        "name": "Square Photos",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "عنوان القسم"
+          }
+        ],
+        "blocks": [
+          {
+            "type": "photo",
+            "name": "صورة",
+            "settings": [
+              {
+                "type": "image_picker",
+                "id": "image",
+                "label": "الصورة",
+                "required": true
+              },
+              {
+                "type": "url",
+                "id": "link",
+                "label": "الرابط"
+              },
+              {
+                "type": "text",
+                "id": "alt_text",
+                "label": "النص البديل"
+              },
+              {
+                "type": "text",
+                "id": "caption",
+                "label": "التعليق (اختياري)"
+              }
+            ]
+          }
+        ],
+        "max_blocks": 12
+      }
     },
     {
       "key": "46cd056e-4c45-4644-abc2-bff18fb664be",
@@ -121,7 +383,49 @@
       },
       "icon": "sicon-store",
       "path": "components.store-features",
-      "fields": []
+      "fields": {
+        "name": "Store Features",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "عنوان القسم"
+          }
+        ],
+        "blocks": [
+          {
+            "type": "feature",
+            "name": "ميزة",
+            "settings": [
+              {
+                "type": "image_picker",
+                "id": "icon",
+                "label": "أيقونة (صورة)"
+              },
+              {
+                "type": "text",
+                "id": "icon_class",
+                "label": "أو فئة الأيقونة (CSS class)",
+                "info": "مثال: sicon-truck, sicon-shield-check"
+              },
+              {
+                "type": "text",
+                "id": "title",
+                "label": "العنوان",
+                "required": true,
+                "default": "ميزة المتجر"
+              },
+              {
+                "type": "textarea",
+                "id": "description",
+                "label": "الوصف",
+                "default": "وصف الميزة"
+              }
+            ]
+          }
+        ],
+        "max_blocks": 6
+      }
     },
     {
       "key": "88bfab10-3158-4f9d-99fa-97ab8357ed7c",
@@ -131,7 +435,29 @@
       },
       "icon": "sicon-store",
       "path": "components.youtube",
-      "fields": []
+      "fields": {
+        "name": "YouTube",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "عنوان القسم"
+          },
+          {
+            "type": "text",
+            "id": "youtube_id",
+            "label": "معرف فيديو YouTube",
+            "info": "أدخل المعرف فقط (مثال: dQw4w9WgXcQ) أو الرابط الكامل",
+            "required": true
+          },
+          {
+            "type": "checkbox",
+            "id": "autoplay",
+            "label": "تشغيل تلقائي",
+            "default": false
+          }
+        ]
+      }
     },
     {
       "key": "d9518751-069e-4825-a8af-5fb71143ff28",
@@ -141,7 +467,43 @@
       },
       "icon": "sicon-store",
       "path": "components.featured-products",
-      "fields": []
+      "fields": {
+        "name": "Featured Products",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "عنوان القسم",
+            "default": "منتجات مميزة"
+          },
+          {
+            "type": "checkbox",
+            "id": "unite_height",
+            "label": "توحيد ارتفاع البطاقات",
+            "default": true
+          },
+          {
+            "type": "checkbox",
+            "id": "show_description",
+            "label": "إظهار الوصف",
+            "default": false
+          }
+        ],
+        "blocks": [
+          {
+            "type": "product",
+            "name": "منتج",
+            "settings": [
+              {
+                "type": "product",
+                "id": "product",
+                "label": "اختر المنتج"
+              }
+            ]
+          }
+        ],
+        "max_blocks": 12
+      }
     },
     {
       "key": "f750c8fd-03a3-49e6-9253-008c6ddd17aa",
@@ -151,7 +513,40 @@
       },
       "icon": "sicon-store",
       "path": "components.hero",
-      "fields": []
+      "fields": {
+        "name": "Hero",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "العنوان الرئيسي",
+            "default": "استعد لوقت هادئ ومريح"
+          },
+          {
+            "type": "textarea",
+            "id": "subtitle",
+            "label": "النص الفرعي",
+            "default": "تجربة سبا متكاملة تجمع بين الرفاهية والراحة في أجواء هادئة."
+          },
+          {
+            "type": "text",
+            "id": "cta_label",
+            "label": "نص زر الدعوة",
+            "default": "احجز الآن"
+          },
+          {
+            "type": "url",
+            "id": "cta_link",
+            "label": "رابط زر الدعوة",
+            "default": "/collections/services"
+          },
+          {
+            "type": "image_picker",
+            "id": "background_image",
+            "label": "صورة الخلفية"
+          }
+        ]
+      }
     },
     {
       "key": "f3692d6b-73f0-4a40-91cc-cc3bb013b07a",
@@ -161,7 +556,49 @@
       },
       "icon": "sicon-store",
       "path": "components.services",
-      "fields": []
+      "fields": {
+        "name": "Services",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "عنوان القسم",
+            "default": "خدمات سبا فاخرة"
+          },
+          {
+            "type": "textarea",
+            "id": "subtitle",
+            "label": "النص الفرعي",
+            "default": "اختبر تجربة فريدة مع قائمة خدماتنا المتنوعة."
+          }
+        ],
+        "blocks": [
+          {
+            "type": "service",
+            "name": "خدمة",
+            "settings": [
+              {
+                "type": "image_picker",
+                "id": "icon",
+                "label": "صورة الخدمة"
+              },
+              {
+                "type": "text",
+                "id": "title",
+                "label": "عنوان الخدمة",
+                "default": "جلسة تدليك"
+              },
+              {
+                "type": "textarea",
+                "id": "description",
+                "label": "وصف الخدمة",
+                "default": "استرخِ مع جلسة تدليك متكاملة تزيل التوتر وتعيد التوازن."
+              }
+            ]
+          }
+        ],
+        "max_blocks": 6
+      }
     },
     {
       "key": "eff7d341-a7c5-4a49-8089-49888558d0e6",
@@ -171,7 +608,34 @@
       },
       "icon": "sicon-store",
       "path": "components.about",
-      "fields": []
+      "fields": {
+        "name": "About",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "عنوان القسم",
+            "default": "عن Quiet Hour"
+          },
+          {
+            "type": "textarea",
+            "id": "description",
+            "label": "الوصف",
+            "default": "Quiet Hour هو سبا فاخر يقدم تجربة حصرية لعملائنا مع أفضل الخبراء والعلاجات المميزة."
+          },
+          {
+            "type": "textarea",
+            "id": "points",
+            "label": "نقاط مميزة (سطر لكل نقطة)",
+            "default": "خبراء معتمدون عالميًا\nجلسات خاصة وعلاجية\nمنتجات عضوية عالية الجودة"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "صورة جانبية"
+          }
+        ]
+      }
     },
     {
       "key": "a1dc5455-33fb-4362-ae1d-f188e81dc7d2",
@@ -181,7 +645,50 @@
       },
       "icon": "sicon-store",
       "path": "components.testimonials",
-      "fields": []
+      "fields": {
+        "name": "Testimonials",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "عنوان القسم",
+            "default": "ماذا يقول عملاؤنا؟"
+          },
+          {
+            "type": "textarea",
+            "id": "subtitle",
+            "label": "النص الفرعي",
+            "default": "آراء حقيقية من عملاء استمتعوا بتجربة Quiet Hour."
+          }
+        ],
+        "blocks": [
+          {
+            "type": "testimonial",
+            "name": "شهادة",
+            "settings": [
+              {
+                "type": "textarea",
+                "id": "message",
+                "label": "نص الشهادة",
+                "default": "كانت تجربتي رائعة! الطاقم محترف والأجواء مريحة للغاية."
+              },
+              {
+                "type": "text",
+                "id": "name",
+                "label": "اسم العميل",
+                "default": "هدى العتيبي"
+              },
+              {
+                "type": "text",
+                "id": "role",
+                "label": "وصف العميل (اختياري)",
+                "default": "عميلة مميزة"
+              }
+            ]
+          }
+        ],
+        "max_blocks": 6
+      }
     },
     {
       "key": "a27d0d7b-6a41-4157-865d-a34d0762c812",
@@ -191,7 +698,46 @@
       },
       "icon": "sicon-store",
       "path": "components.fixed-products",
-      "fields": []
+      "fields": {
+        "name": "Fixed Products",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "عنوان القسم",
+            "default": "منتجات مميزة"
+          },
+          {
+            "type": "range",
+            "id": "products_count",
+            "label": "عدد المنتجات",
+            "min": 2,
+            "max": 12,
+            "step": 1,
+            "default": 4
+          },
+          {
+            "type": "checkbox",
+            "id": "unite_height",
+            "label": "توحيد ارتفاع البطاقات",
+            "default": true
+          }
+        ],
+        "blocks": [
+          {
+            "type": "product",
+            "name": "منتج",
+            "settings": [
+              {
+                "type": "product",
+                "id": "product",
+                "label": "اختر المنتج"
+              }
+            ]
+          }
+        ],
+        "max_blocks": 12
+      }
     }
   ]
 }

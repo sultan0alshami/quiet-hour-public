@@ -1,0 +1,25 @@
+{% comment %}
+  YouTube Section - Embedded YouTube video
+{% endcomment %}
+
+<section class="youtube-section">
+  <div class="container">
+    {% if component.settings.title %}
+      <h2 class="section-title">{{ component.settings.title }}</h2>
+    {% endif %}
+    <div class="youtube-wrapper">
+      {% if component.settings.youtube_id %}
+        <iframe 
+          width="100%" 
+          height="500" 
+          src="https://www.youtube.com/embed/{{ component.settings.youtube_id }}{% if component.settings.autoplay %}?autoplay=1{% endif %}" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      {% else %}
+        <p class="youtube-placeholder">يرجى إدخال معرف فيديو YouTube</p>
+      {% endif %}
+    </div>
+  </div>
+</section>

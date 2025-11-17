@@ -1,0 +1,24 @@
+{% comment %}
+  Fixed Banner Section - Sticky/fixed promotional banner
+{% endcomment %}
+
+{% if component.settings.enable %}
+  <div class="fixed-banner fixed-banner-{{ component.settings.position }}" style="{% if component.settings.background_image %}background-image: url({{ component.settings.background_image | img_url: 'master' }});{% endif %} background-color: {{ component.settings.background_color | default: 'var(--primary-color)' }};">
+    <div class="container">
+      <div class="fixed-banner-content">
+        {% if component.settings.title %}
+          <h2>{{ component.settings.title }}</h2>
+        {% endif %}
+        {% if component.settings.description %}
+          <p>{{ component.settings.description }}</p>
+        {% endif %}
+        {% if component.settings.button_label and component.settings.button_link %}
+          <a href="{{ component.settings.button_link }}" class="btn-primary">{{ component.settings.button_label }}</a>
+        {% endif %}
+        {% if component.settings.show_close %}
+          <button class="fixed-banner-close" data-close-banner>×</button>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}

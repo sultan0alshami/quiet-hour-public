@@ -1,0 +1,22 @@
+<section class="services-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>{{ component.settings.title }}</h2>
+      <p>{{ component.settings.subtitle }}</p>
+    </div>
+
+    <div class="services-grid">
+      {% for block in component.blocks %}
+        <div class="service-card">
+          {% if block.settings.icon %}
+            <img src="{{ block.settings.icon | img_url: '200x' }}" alt="{{ block.settings.title }}">
+          {% endif %}
+          <h3>{{ block.settings.title }}</h3>
+          <p>{{ block.settings.description }}</p>
+        </div>
+      {% else %}
+        <p class="empty-state">أضف خدماتك من إعدادات القسم.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
