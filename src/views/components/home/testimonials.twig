@@ -1,0 +1,25 @@
+<section class="testimonials-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>{{ component.settings.title }}</h2>
+      <p>{{ component.settings.subtitle }}</p>
+    </div>
+
+    <div class="testimonials-grid">
+      {% for block in component.blocks %}
+        <blockquote class="testimonial-card">
+          <p class="testimonial-message">"{{ block.settings.message }}"</p>
+          <div class="testimonial-meta">
+            <span class="name">{{ block.settings.name }}</span>
+            {% if block.settings.role %}
+              <span class="role">{{ block.settings.role }}</span>
+            {% endif %}
+          </div>
+        </blockquote>
+      {% else %}
+        <p class="empty-state">أضف شهادات العملاء من إعدادات القسم.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+

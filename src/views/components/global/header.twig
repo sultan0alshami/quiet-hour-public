@@ -1,0 +1,37 @@
+{# Quiet Hour header #}
+<header class="site-header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <a href="/">
+          {% if component.settings.logo %}
+            <img src="{{ component.settings.logo | file_url }}" alt="{{ store.name }}">
+          {% else %}
+            <span class="logo-text">{{ store.name }}</span>
+          {% endif %}
+        </a>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/">{{ 'general.home' | t }}</a></li>
+          <li><a href="/collections/services">{{ 'general.services' | t }}</a></li>
+          <li><a href="/pages/about">{{ 'general.about' | t }}</a></li>
+          <li><a href="/pages/contact">{{ 'general.contact' | t }}</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="/cart" class="cart-icon">
+          <span>{{ 'cart.title' | t }}</span>
+          <span class="cart-count">{{ cart.item_count }}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  {% if component.settings.enable_mega_menu %}
+    {% component 'global.mega-menu' %}
+  {% endif %}
+</header>
+

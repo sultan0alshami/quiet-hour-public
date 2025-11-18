@@ -1,0 +1,40 @@
+{# Mega menu component #}
+<nav class="mega-menu" data-mega-menu>
+  <div class="container">
+    <ul class="mega-menu-list">
+      {% for block in component.blocks %}
+        <li class="mega-menu-item{% if block.settings.has_dropdown %} has-dropdown{% endif %}">
+          <a href="{{ block.settings.link }}" class="mega-menu-link">
+            {{ block.settings.title }}
+            {% if block.settings.has_dropdown %}
+              <span class="dropdown-arrow">▼</span>
+            {% endif %}
+          </a>
+
+          {% if block.settings.has_dropdown %}
+            <div class="mega-menu-dropdown">
+              <div class="mega-menu-content">
+                {% if block.settings.image %}
+                  <div class="mega-menu-image">
+                    <img src="{{ block.settings.image | img_url('300x') }}" alt="{{ block.settings.title }}">
+                  </div>
+                {% endif %}
+
+                <div class="mega-menu-links">
+                  {% for i in 1..6 %}
+                    {% set link_key = 'link_' ~ i %}
+                    {% set title_key = 'title_' ~ i %}
+                    {% if block.settings[title_key] %}
+                      <a href="{{ block.settings[link_key] }}">{{ block.settings[title_key] }}</a>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+

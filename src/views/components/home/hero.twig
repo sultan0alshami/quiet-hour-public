@@ -1,0 +1,13 @@
+<section class="hero-section"{% if component.settings.background_image %} style="background-image: url({{ component.settings.background_image | img_url('master') }});" {% endif %}>
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <h1>{{ component.settings.title }}</h1>
+      <p>{{ component.settings.subtitle }}</p>
+      {% if component.settings.cta_label and component.settings.cta_link %}
+        <a class="btn-primary" href="{{ component.settings.cta_link }}">{{ component.settings.cta_label }}</a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+

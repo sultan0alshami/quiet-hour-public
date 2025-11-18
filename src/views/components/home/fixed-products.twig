@@ -1,0 +1,44 @@
+{% comment %}
+  Fixed Products Section - Static product grid display
+{% endcomment %}
+
+<section class="fixed-products-section">
+  <div class="container">
+    {% if component.settings.title %}
+      <h2 class="section-title">{{ component.settings.title }}</h2>
+    {% endif %}
+    <div class="fixed-products-grid{% if component.settings.unite_height %} unite-cards-height{% endif %}">
+      {% set products = component.blocks %}
+      {% if component.settings.products_count %}
+        {% set products = component.blocks|slice(0, component.settings.products_count) %}
+      {% endif %}
+      {% for block in products %}
+        {% set product = all_products[block.settings.product] %}
+        {% if product %}
+          <div class="product-card">
+            <a href="{{ product.url }}">
+              {% if product.featured_image %}
+                <div class="product-image">
+                  <img src="{{ product.featured_image | img_url('400x400') }}" alt="{{ product.title }}">
+                  {% if product.compare_at_price > product.price %}
+                    <span class="sale-badge">خصم</span>
+                  {% endif %}
+                </div>
+              {% endif %}
+              <div class="product-info">
+                <h3>{{ product.title }}</h3>
+                <p class="price">
+                  {{ product.price | money }}
+                  {% if product.compare_at_price > product.price %}
+                    <span class="compare-price">{{ product.compare_at_price | money }}</span>
+                  {% endif %}
+                </p>
+              </div>
+            </a>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+

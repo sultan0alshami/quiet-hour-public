@@ -1,0 +1,33 @@
+{% comment %}
+  Store Features Section - Icon-based feature highlights
+{% endcomment %}
+
+<section class="store-features-section">
+  <div class="container">
+    {% if component.settings.title %}
+      <h2 class="section-title">{{ component.settings.title }}</h2>
+    {% endif %}
+    <div class="features-grid">
+      {% for block in component.blocks %}
+        <div class="feature-item">
+          {% if block.settings.icon %}
+            <div class="feature-icon">
+              <img src="{{ block.settings.icon | img_url('100x100') }}" alt="{{ block.settings.title }}">
+            </div>
+          {% elsif block.settings.icon_class %}
+            <div class="feature-icon">
+              <i class="{{ block.settings.icon_class }}"></i>
+            </div>
+          {% else %}
+            <div class="feature-icon">
+              <span class="default-icon">✓</span>
+            </div>
+          {% endif %}
+          <h3>{{ block.settings.title }}</h3>
+          <p>{{ block.settings.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+

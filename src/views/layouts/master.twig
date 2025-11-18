@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{ user.language.code }}" dir="{{ user.language.dir }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google tag for tracking (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17695513284"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17695513284');
+  </script>
+
+  <style>
+    :root {
+      --primary-color: {{ theme.settings.get('primary_color', '#4A3728') }};
+      --secondary-color: {{ theme.settings.get('secondary_color', '#E8DCC6') }};
+      --background-color: {{ theme.settings.get('background_color', '#FFF8F0') }};
+      --text-color: {{ theme.settings.get('text_color', '#2C2416') }};
+      --accent-color: {{ theme.settings.get('accent_color', '#8B6F47') }};
+    }
+  </style>
+
+  {% hook 'head:start' %}
+  {% hook head %}
+  {% block styles %}{% endblock %}
+  <link rel="stylesheet" href="{{ 'app.css' | asset }}">
+  {% if theme.font.path %}
+    <link rel="stylesheet" href="{{ theme.font.path | cdn }}">
+  {% endif %}
+  {% hook 'head:end' %}
+</head>
+<body class="quiet-hour-body">
+  {% hook 'body:start' %}
+
+  {% component 'global.header' %}
+
+  <main id="main-content" role="main">
+    {% block content %}{% endblock %}
+  </main>
+
+  {% component 'global.footer' %}
+
+  <script src="{{ 'app.js' | asset }}" defer></script>
+  {% hook 'body:end' %}
+  {% block scripts %}{% endblock %}
+</body>
+</html>
+

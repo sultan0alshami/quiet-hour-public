@@ -1,0 +1,43 @@
+{% comment %}
+  Featured Products Section - Highlighted product showcase
+{% endcomment %}
+
+<section class="featured-products-section">
+  <div class="container">
+    {% if component.settings.title %}
+      <h2 class="section-title">{{ component.settings.title }}</h2>
+    {% endif %}
+    <div class="featured-products-grid{% if component.settings.unite_height %} unite-cards-height{% endif %}">
+      {% for block in component.blocks %}
+        {% set product = all_products[block.settings.product] %}
+        {% if product %}
+          <div class="featured-product-card">
+            <a href="{{ product.url }}">
+              {% if product.featured_image %}
+                <div class="product-image">
+                  <img src="{{ product.featured_image | img_url('400x400') }}" alt="{{ product.title }}">
+                  {% if product.compare_at_price > product.price %}
+                    <span class="sale-badge">خصم</span>
+                  {% endif %}
+                </div>
+              {% endif %}
+              <div class="product-info">
+                <h3>{{ product.title }}</h3>
+                <p class="price">
+                  {{ product.price | money }}
+                  {% if product.compare_at_price > product.price %}
+                    <span class="compare-price">{{ product.compare_at_price | money }}</span>
+                  {% endif %}
+                </p>
+                {% if component.settings.show_description and product.description %}
+                  <p class="product-description">{{ product.description | strip_html | truncate: 100 }}</p>
+                {% endif %}
+              </div>
+            </a>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+

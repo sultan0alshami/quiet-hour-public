@@ -14,20 +14,42 @@ A premium spa booking theme for Salla e-commerce platform.
 
 ```
 quiet-hour-theme/
-├── templates/          # Liquid template files
-├── sections/           # Reusable sections
-├── assets/             # CSS, JS, images
-├── config/             # Theme configuration
-├── locales/            # Translation files
+├── src/
+│   ├── assets/         # Uncompiled CSS & JS (app.css/app.js)
+│   ├── locales/        # Storefront translations
+│   └── views/          # Twig layouts, pages, and components
+├── public/             # Built assets copied from src/assets
+├── package.json        # Build & watch scripts
+├── twilight.json       # Theme metadata & component registry
 └── README.md
 ```
 
 ## 🚀 Getting Started
 
-1. Install dependencies (if any)
-2. Customize theme settings in `config/theme.json`
-3. Test locally using Salla CLI
-4. Publish to Salla Partners Portal
+1. Install build tools
+
+   ```bash
+   npm install
+   ```
+
+2. Compile storefront assets
+
+   ```bash
+   npm run build        # copies src/assets → public/
+   npm run watch        # optional, rebuilds on file changes
+   ```
+
+3. Preview with Salla CLI
+
+   ```bash
+   salla theme serve
+   ```
+
+4. Publish from the project root (CLI will link to TwilightCI)
+
+   ```bash
+   salla theme publish
+   ```
 
 ## 📚 Documentation
 

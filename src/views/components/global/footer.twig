@@ -1,0 +1,46 @@
+{# Quiet Hour footer #}
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>{{ component.settings.title | default(store.name) }}</h3>
+        <p>{{ component.settings.subtitle | default('منصة حجز خدمات السبا المميزة') }}</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>{{ component.settings.links_title | default('روابط سريعة') }}</h4>
+        <ul>
+          {% for index in 1..4 %}
+            {% set title_key = 'link_' ~ index ~ '_title' %}
+            {% set url_key = 'link_' ~ index ~ '_url' %}
+            {% if component.settings[title_key] and component.settings[url_key] %}
+              <li><a href="{{ component.settings[url_key] }}">{{ component.settings[title_key] }}</a></li>
+            {% endif %}
+          {% endfor %}
+
+          {% if not component.settings.link_1_title %}
+            <li><a href="/">{{ 'general.home' | t }}</a></li>
+            <li><a href="/collections/services">{{ 'general.services' | t }}</a></li>
+            <li><a href="/pages/about">{{ 'general.about' | t }}</a></li>
+            <li><a href="/pages/contact">{{ 'general.contact' | t }}</a></li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>{{ component.settings.contact_title | default('معلومات التواصل') }}</h4>
+        <p>{{ component.settings.contact_email | default('البريد: support@quiethour.sa') }}</p>
+        <p>{{ component.settings.contact_phone | default('الهاتف: 966500000000') }}</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {{ "now" | date("Y") }} {{ store.name }}. {{ component.settings.copyright | default('جميع الحقوق محفوظة.') }}</p>
+      <p>
+        <a href="{{ component.settings.privacy_link | default('/pages/privacy') }}">{{ 'general.privacy_policy' | t }}</a> |
+        <a href="{{ component.settings.faq_link | default('/pages/faq') }}">{{ 'general.faq' | t }}</a>
+      </p>
+    </div>
+  </div>
+</footer>
+

@@ -50,9 +50,258 @@
       "label": "لون الخلفية",
       "format": "color",
       "value": "#FFF8F0"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "لون التمييز",
+      "format": "color",
+      "value": "#8B6F47"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "لون النص",
+      "format": "color",
+      "value": "#2C2416"
     }
   ],
   "components": [
+    {
+      "key": "93c9a8b6-a6f2-4a7b-9814-2f1c0d0d2c11",
+      "title": {
+        "en": "Header",
+        "ar": "رأس الصفحة"
+      },
+      "icon": "sicon-computer",
+      "path": "global.header",
+      "fields": {
+        "name": "Header",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "شعار المتجر"
+          },
+          {
+            "type": "checkbox",
+            "id": "enable_mega_menu",
+            "label": "تفعيل ميجا منيو",
+            "default": false
+          }
+        ]
+      }
+    },
+    {
+      "key": "6f82a512-19a9-49aa-9516-0a7d8cf0c5b9",
+      "title": {
+        "en": "Mega Menu",
+        "ar": "ميجا منيو"
+      },
+      "icon": "sicon-menu",
+      "path": "global.mega-menu",
+      "fields": {
+        "name": "Mega Menu",
+        "blocks": [
+          {
+            "type": "menu_item",
+            "name": "عنصر القائمة",
+            "settings": [
+              {
+                "type": "text",
+                "id": "title",
+                "label": "العنوان",
+                "default": "القائمة"
+              },
+              {
+                "type": "url",
+                "id": "link",
+                "label": "الرابط"
+              },
+              {
+                "type": "checkbox",
+                "id": "has_dropdown",
+                "label": "يحتوي على قائمة منسدلة",
+                "default": false
+              },
+              {
+                "type": "image_picker",
+                "id": "image",
+                "label": "صورة القائمة (اختياري)"
+              },
+              {
+                "type": "text",
+                "id": "title_1",
+                "label": "عنوان الرابط 1"
+              },
+              {
+                "type": "url",
+                "id": "link_1",
+                "label": "الرابط 1"
+              },
+              {
+                "type": "text",
+                "id": "title_2",
+                "label": "عنوان الرابط 2"
+              },
+              {
+                "type": "url",
+                "id": "link_2",
+                "label": "الرابط 2"
+              },
+              {
+                "type": "text",
+                "id": "title_3",
+                "label": "عنوان الرابط 3"
+              },
+              {
+                "type": "url",
+                "id": "link_3",
+                "label": "الرابط 3"
+              },
+              {
+                "type": "text",
+                "id": "title_4",
+                "label": "عنوان الرابط 4"
+              },
+              {
+                "type": "url",
+                "id": "link_4",
+                "label": "الرابط 4"
+              },
+              {
+                "type": "text",
+                "id": "title_5",
+                "label": "عنوان الرابط 5"
+              },
+              {
+                "type": "url",
+                "id": "link_5",
+                "label": "الرابط 5"
+              },
+              {
+                "type": "text",
+                "id": "title_6",
+                "label": "عنوان الرابط 6"
+              },
+              {
+                "type": "url",
+                "id": "link_6",
+                "label": "الرابط 6"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "key": "0d4c8d0d-2c3c-4f60-85b0-052a08c3a5cc",
+      "title": {
+        "en": "Footer",
+        "ar": "تذييل الصفحة"
+      },
+      "icon": "sicon-layout",
+      "path": "global.footer",
+      "fields": {
+        "name": "Footer",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "عنوان القسم",
+            "default": "Quiet Hour Spa"
+          },
+          {
+            "type": "textarea",
+            "id": "subtitle",
+            "label": "وصف قصير",
+            "default": "منصة حجز خدمات السبا المميزة"
+          },
+          {
+            "type": "text",
+            "id": "links_title",
+            "label": "عنوان روابط سريعة",
+            "default": "روابط سريعة"
+          },
+          {
+            "type": "text",
+            "id": "link_1_title",
+            "label": "عنوان الرابط 1"
+          },
+          {
+            "type": "url",
+            "id": "link_1_url",
+            "label": "رابط 1"
+          },
+          {
+            "type": "text",
+            "id": "link_2_title",
+            "label": "عنوان الرابط 2"
+          },
+          {
+            "type": "url",
+            "id": "link_2_url",
+            "label": "رابط 2"
+          },
+          {
+            "type": "text",
+            "id": "link_3_title",
+            "label": "عنوان الرابط 3"
+          },
+          {
+            "type": "url",
+            "id": "link_3_url",
+            "label": "رابط 3"
+          },
+          {
+            "type": "text",
+            "id": "link_4_title",
+            "label": "عنوان الرابط 4"
+          },
+          {
+            "type": "url",
+            "id": "link_4_url",
+            "label": "رابط 4"
+          },
+          {
+            "type": "text",
+            "id": "contact_title",
+            "label": "عنوان معلومات التواصل",
+            "default": "معلومات التواصل"
+          },
+          {
+            "type": "text",
+            "id": "contact_email",
+            "label": "البريد الإلكتروني",
+            "default": "البريد: info@quiethour.sa"
+          },
+          {
+            "type": "text",
+            "id": "contact_phone",
+            "label": "رقم الهاتف",
+            "default": "الهاتف: 966500000000"
+          },
+          {
+            "type": "text",
+            "id": "privacy_link",
+            "label": "رابط سياسة الخصوصية",
+            "default": "/pages/privacy"
+          },
+          {
+            "type": "text",
+            "id": "faq_link",
+            "label": "رابط الأسئلة الشائعة",
+            "default": "/pages/faq"
+          },
+          {
+            "type": "text",
+            "id": "copyright",
+            "label": "نص الحقوق",
+            "default": "جميع الحقوق محفوظة."
+          }
+        ]
+      }
+    },
     {
       "key": "823ea62f-8352-43d0-9712-71c51250b1a8",
       "title": {
@@ -60,7 +309,7 @@
         "ar": "بانر ثابت"
       },
       "icon": "sicon-computer",
-      "path": "components.fixed-banner",
+      "path": "home.fixed-banner",
       "fields": {
         "name": "Fixed Banner",
         "settings": [
@@ -137,7 +386,7 @@
         "ar": "شرائح الصور"
       },
       "icon": "sicon-store",
-      "path": "components.photos-slider",
+      "path": "home.photos-slider",
       "fields": {
         "name": "Photos Slider",
         "settings": [
@@ -181,7 +430,7 @@
         "ar": "شرائح المنتجات"
       },
       "icon": "sicon-store",
-      "path": "components.products-slider",
+      "path": "home.products-slider",
       "fields": {
         "name": "Products Slider",
         "settings": [
@@ -215,7 +464,7 @@
         "ar": "منظر الخلفية"
       },
       "icon": "sicon-store",
-      "path": "components.parallax-background",
+      "path": "home.parallax-background",
       "fields": {
         "name": "Parallax Background",
         "settings": [
@@ -264,7 +513,7 @@
         "ar": "توصيات عشوائية"
       },
       "icon": "sicon-store",
-      "path": "components.random-testimonials",
+      "path": "home.random-testimonials",
       "fields": {
         "name": "Random Testimonials",
         "settings": [
@@ -333,7 +582,7 @@
         "ar": "صور مربعة"
       },
       "icon": "sicon-store",
-      "path": "components.square-photos",
+      "path": "home.square-photos",
       "fields": {
         "name": "Square Photos",
         "settings": [
@@ -382,7 +631,7 @@
         "ar": "مزايا المتجر"
       },
       "icon": "sicon-store",
-      "path": "components.store-features",
+      "path": "home.store-features",
       "fields": {
         "name": "Store Features",
         "settings": [
@@ -434,7 +683,7 @@
         "ar": "فيديو يوتيوب"
       },
       "icon": "sicon-store",
-      "path": "components.youtube",
+      "path": "home.youtube",
       "fields": {
         "name": "YouTube",
         "settings": [
@@ -466,7 +715,7 @@
         "ar": "منتجات مميزة"
       },
       "icon": "sicon-store",
-      "path": "components.featured-products",
+      "path": "home.featured-products",
       "fields": {
         "name": "Featured Products",
         "settings": [
@@ -512,7 +761,7 @@
         "ar": "قسم البطل"
       },
       "icon": "sicon-store",
-      "path": "components.hero",
+      "path": "home.hero",
       "fields": {
         "name": "Hero",
         "settings": [
@@ -555,7 +804,7 @@
         "ar": "قسم الخدمات"
       },
       "icon": "sicon-store",
-      "path": "components.services",
+      "path": "home.services",
       "fields": {
         "name": "Services",
         "settings": [
@@ -607,7 +856,7 @@
         "ar": "قسم من نحن"
       },
       "icon": "sicon-store",
-      "path": "components.about",
+      "path": "home.about",
       "fields": {
         "name": "About",
         "settings": [
@@ -644,7 +893,7 @@
         "ar": "شهادات العملاء"
       },
       "icon": "sicon-store",
-      "path": "components.testimonials",
+      "path": "home.testimonials",
       "fields": {
         "name": "Testimonials",
         "settings": [
@@ -697,7 +946,7 @@
         "ar": "منتجات ثابتة"
       },
       "icon": "sicon-store",
-      "path": "components.fixed-products",
+      "path": "home.fixed-products",
       "fields": {
         "name": "Fixed Products",
         "settings": [
