@@ -1067,6 +1067,16 @@
             "icon": "sicon-clock",
             "path": "home.limited-offers-banner",
             "fields": []
+        },
+        {
+            "key": "fe7d54f5-3686-4817-9477-35c9243a388a",
+            "title": {
+                "en": "Special Offer Products",
+                "ar": "منتجات مع عرض خاص"
+            },
+            "icon": "sicon-crown",
+            "path": "home.special-offer-products",
+            "fields": []
         }
     ]
 }
