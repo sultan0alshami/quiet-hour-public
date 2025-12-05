@@ -308,7 +308,7 @@
                 "en": "Fixed Banner",
                 "ar": "بانر ثابت"
             },
-            "icon": "sicon-computer",
+            "icon": "sicon-fit",
             "path": "home.fixed-banner",
             "fields": {
                 "name": "Fixed Banner",
