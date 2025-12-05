@@ -855,7 +855,7 @@
                 "en": "About Section",
                 "ar": "قسم من نحن"
             },
-            "icon": "sicon-store",
+            "icon": "sicon-ellipsis-filled",
             "path": "home.about",
             "fields": {
                 "name": "About",
