@@ -945,7 +945,7 @@
                 "en": "Fixed Products",
                 "ar": "منتجات ثابتة"
             },
-            "icon": "sicon-store",
+            "icon": "sicon-table",
             "path": "home.fixed-products",
             "fields": {
                 "name": "Fixed Products",
