@@ -714,7 +714,7 @@
                 "en": "Featured Products",
                 "ar": "منتجات مميزة"
             },
-            "icon": "sicon-store",
+            "icon": "sicon-star-o",
             "path": "home.featured-products",
             "fields": {
                 "name": "Featured Products",
