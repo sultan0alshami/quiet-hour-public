@@ -630,7 +630,7 @@
                 "en": "Store Features",
                 "ar": "مزايا المتجر"
             },
-            "icon": "sicon-store",
+            "icon": "sicon-add-circle",
             "path": "home.store-features",
             "fields": {
                 "name": "Store Features",
