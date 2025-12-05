@@ -429,7 +429,7 @@
                 "en": "Products Slider",
                 "ar": "شرائح المنتجات"
             },
-            "icon": "sicon-store",
+            "icon": "sicon-cup-hot",
             "path": "home.products-slider",
             "fields": {
                 "name": "Products Slider",
