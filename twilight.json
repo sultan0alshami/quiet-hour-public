@@ -1017,6 +1017,16 @@
             "icon": "sicon-chat-bubbles",
             "path": "home.faq",
             "fields": []
+        },
+        {
+            "key": "cc468d6f-1214-4912-86ef-f9a7d3e3b935",
+            "title": {
+                "en": "Articles",
+                "ar": "المقالات"
+            },
+            "icon": "sicon-align-right",
+            "path": "home.articles",
+            "fields": []
         }
     ]
 }
