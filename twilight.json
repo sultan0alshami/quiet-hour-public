@@ -1007,6 +1007,16 @@
             "icon": "sicon-apple",
             "path": "home.brands",
             "fields": []
+        },
+        {
+            "key": "2d57849b-ac3e-4dba-b862-16811309f1f6",
+            "title": {
+                "en": "FAQ",
+                "ar": "الأسئلة الشائعة"
+            },
+            "icon": "sicon-chat-bubbles",
+            "path": "home.faq",
+            "fields": []
         }
     ]
 }
