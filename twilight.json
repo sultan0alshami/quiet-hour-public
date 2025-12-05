@@ -385,7 +385,7 @@
                 "en": "Photos Slider",
                 "ar": "شرائح الصور"
             },
-            "icon": "sicon-store",
+            "icon": "sicon-carousel",
             "path": "home.photos-slider",
             "fields": {
                 "name": "Photos Slider",
