@@ -987,6 +987,16 @@
                 ],
                 "max_blocks": 12
             }
+        },
+        {
+            "key": "d0a93f94-c155-4b75-b9e1-eff321ccada2",
+            "title": {
+                "en": "Categories",
+                "ar": "التصنيفات"
+            },
+            "icon": "sicon-ol",
+            "path": "home.categories",
+            "fields": []
         }
     ]
 }
