@@ -1077,6 +1077,16 @@
             "icon": "sicon-crown",
             "path": "home.special-offer-products",
             "fields": []
+        },
+        {
+            "key": "507186e6-5a25-4736-af51-e20f221e423a",
+            "title": {
+                "en": "Map",
+                "ar": "الخريطة"
+            },
+            "icon": "sicon-location",
+            "path": "home.map",
+            "fields": []
         }
     ]
 }
