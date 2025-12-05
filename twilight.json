@@ -997,6 +997,16 @@
             "icon": "sicon-ol",
             "path": "home.categories",
             "fields": []
+        },
+        {
+            "key": "288f5a30-3ba7-4e74-b520-1c7b8d0c656a",
+            "title": {
+                "en": "Brands",
+                "ar": "الماركات التجارية"
+            },
+            "icon": "sicon-apple",
+            "path": "home.brands",
+            "fields": []
         }
     ]
 }
