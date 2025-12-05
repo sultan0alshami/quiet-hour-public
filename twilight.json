@@ -1027,6 +1027,16 @@
             "icon": "sicon-align-right",
             "path": "home.articles",
             "fields": []
+        },
+        {
+            "key": "98d1c9d8-8df8-43b4-be35-bbb174b0c2d8",
+            "title": {
+                "en": "Payment Methods",
+                "ar": "وسائل الدفع"
+            },
+            "icon": "sicon-dollar-money",
+            "path": "home.payment-methods",
+            "fields": []
         }
     ]
 }
