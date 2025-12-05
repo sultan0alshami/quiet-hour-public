@@ -581,7 +581,7 @@
                 "en": "Square Photos",
                 "ar": "صور مربعة"
             },
-            "icon": "sicon-store",
+            "icon": "sicon-album-photo",
             "path": "home.square-photos",
             "fields": {
                 "name": "Square Photos",
