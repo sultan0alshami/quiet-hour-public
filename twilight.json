@@ -892,7 +892,7 @@
                 "en": "Testimonials",
                 "ar": "شهادات العملاء"
             },
-            "icon": "sicon-store",
+            "icon": "sicon-quote",
             "path": "home.testimonials",
             "fields": {
                 "name": "Testimonials",
