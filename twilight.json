@@ -682,7 +682,7 @@
                 "en": "YouTube Video",
                 "ar": "فيديو يوتيوب"
             },
-            "icon": "sicon-store",
+            "icon": "sicon-eye",
             "path": "home.youtube",
             "fields": {
                 "name": "YouTube",
