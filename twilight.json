@@ -803,7 +803,7 @@
                 "en": "Services Section",
                 "ar": "قسم الخدمات"
             },
-            "icon": "sicon-store",
+            "icon": "sicon-ul",
             "path": "home.services",
             "fields": {
                 "name": "Services",
