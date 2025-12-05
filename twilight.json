@@ -463,7 +463,7 @@
                 "en": "Parallax Background",
                 "ar": "منظر الخلفية"
             },
-            "icon": "sicon-store",
+            "icon": "sicon-art-palette",
             "path": "home.parallax-background",
             "fields": {
                 "name": "Parallax Background",
