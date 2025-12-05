@@ -1037,6 +1037,16 @@
             "icon": "sicon-dollar-money",
             "path": "home.payment-methods",
             "fields": []
+        },
+        {
+            "key": "87d04c94-6bc0-44ba-8f8f-b86933773be2",
+            "title": {
+                "en": "Social Media",
+                "ar": "وسائل التواصل"
+            },
+            "icon": "sicon-tiktok",
+            "path": "home.social-media",
+            "fields": []
         }
     ]
 }
