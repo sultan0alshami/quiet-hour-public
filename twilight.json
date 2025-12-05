@@ -1057,6 +1057,16 @@
             "icon": "sicon-archive-upload",
             "path": "home.promotional-strip",
             "fields": []
+        },
+        {
+            "key": "56f62530-c690-4499-8b7a-66d82f7c9f12",
+            "title": {
+                "en": "Limited Offers Banner",
+                "ar": "بانر العروض المحدودة"
+            },
+            "icon": "sicon-clock",
+            "path": "home.limited-offers-banner",
+            "fields": []
         }
     ]
 }
