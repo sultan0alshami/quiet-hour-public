@@ -200,7 +200,7 @@
                 "en": "Footer",
                 "ar": "تذييل الصفحة"
             },
-            "icon": "sicon-layout",
+            "icon": "sicon-android-tablet",
             "path": "global.footer",
             "fields": {
                 "name": "Footer",
