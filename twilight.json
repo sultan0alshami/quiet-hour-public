@@ -512,7 +512,7 @@
                 "en": "Random Testimonials",
                 "ar": "توصيات عشوائية"
             },
-            "icon": "sicon-store",
+            "icon": "sicon-bells",
             "path": "home.random-testimonials",
             "fields": {
                 "name": "Random Testimonials",
